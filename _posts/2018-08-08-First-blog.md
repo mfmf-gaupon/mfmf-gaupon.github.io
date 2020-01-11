@@ -3,6 +3,5 @@ layout: post
 title: 初めてのブログwithジキル
 tags: [otherwise]
 ---
-初めてのブログである。ブログというよりは日記に近い感覚でやっているが。
-jekyllとgithubpagesでゼロから作ってみた。ネットで調べれば何でもでてくるいい時代になりましたね。
-特に書くこともないし、今回はテスト的な意味合いがおおいのでこのくらいで。
+backlog的な何か。
+jekyllとgithubpagesでゼロから作ってみた。

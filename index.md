@@ -3,7 +3,7 @@ layout: default
 title: Oh! My JK
 ---
 # Welcome to my JK Home page!
-jkによる誰かのブログみたいな何か。
+jkによる誰かのbacklog的な何か
 
 <ul>
 {% for post in site.posts %}
