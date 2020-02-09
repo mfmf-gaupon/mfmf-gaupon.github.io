@@ -1,6 +1,7 @@
 ---
 layout: test
 title: Oh! My JK
+top:トップページ！
 ---
 # Welcome to my JK Home page!
 jkによる誰かのbacklog的な何か
