@@ -5,7 +5,8 @@ title: Oh! My JK
 # Welcome to my JK Home page!
 jkによる誰かのbacklog的な何か
 以下site変数の持つ情報  
-{{ site.Jekyll }}
+{{ site.markdown }}
+{{ site }}
 
 <ul>
 {% for post in site.posts %}
