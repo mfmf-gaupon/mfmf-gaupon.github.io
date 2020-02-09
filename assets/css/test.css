@@ -1,0 +1,16 @@
+body{
+    margin:0px;
+    background: linear-gradient(#1af3 150px,#1aff)fixed;
+}
+
+.header{
+    padding:0px;
+    margin:auto;
+    background-color: #1af7;
+    width:auto;
+    height:50px;
+}
+
+.main{
+
+}

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: test
 title: Oh! My JK
 ---
 # Welcome to my JK Home page!
