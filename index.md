@@ -1,16 +1,16 @@
 ---
 layout: test
 title: Oh! My JK
-top: test
+top: トップページ！
 ---
 # Welcome to my JK Home page!
 jkによる誰かのbacklog的な何か
 以下site変数の持つ情報  
 {{ site.markdown }}
-{{ site.drops }}
+{{ site }}
 
 以下ドロップス
-{{ Drops }}
+{{ Drop }}
 
 <ul>
 {% for post in site.posts %}
@@ -20,6 +20,4 @@ jkによる誰かのbacklog的な何か
 {% endfor %}
 </ul>
 
-
-以下page変数の持つ情報  
-{{ page }}
+<a href="/backlog_home">BACKLOG</a>
