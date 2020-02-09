@@ -7,7 +7,10 @@ top: test
 jkによる誰かのbacklog的な何か
 以下site変数の持つ情報  
 {{ site.markdown }}
-{{ site }}
+{{ site.drops }}
+
+以下ドロップス
+{{ Drops }}
 
 <ul>
 {% for post in site.posts %}

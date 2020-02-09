@@ -2,6 +2,7 @@
 layout: post
 title: Github Pages とJKのテスト
 tags: [otherwise]
+top: BACKLOG
 ---
 ちゃんとうごいているかな？  
 ついでにマークダウンの記法をテスト　　
