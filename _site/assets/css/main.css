@@ -1,0 +1,30 @@
+body{
+    margin:0px;
+    background: linear-gradient(#1af3 150px,#1aff)fixed;
+}
+
+
+.header{
+    background-color: #1af7;
+    width:auto;
+    height:50px;
+
+}
+.header a{
+    padding:10px 10px 0px 0px;
+    font-size:18px;
+    float:left;
+    font-family:fantasy;
+}
+
+.header h2{
+    margin:0px;
+    padding-right:10px;
+    font-size: 28px;
+    float:left;
+}
+
+.index{
+    font-family:'ＭＳ ゴシック';
+    font-size:20px;
+}

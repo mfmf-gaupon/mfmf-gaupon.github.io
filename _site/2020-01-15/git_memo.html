@@ -1,0 +1,64 @@
+<head>
+	<meta http-euiv="Content-type" content="text/html; charset=utf-8">
+	<title>githubとgitのコネクトをメモ</title>
+	<link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+</head>
+<body>
+	<div class="header">
+	<h2>BACKLOG</h2>
+	<a href="/backlog_home">BACKLOG</a>
+	<a href="/making">MAKING</a>
+	<a href="/">HOME</a>
+	</div>
+	<!-- <header>の存在を忘れてて、div class headerとかでやっていたのちょっとかわいいから残しておくね　-->
+<head>
+	<title>githubとgitのコネクトをメモ</title>
+</head>
+<div class='main'>
+	<h1>githubとgitのコネクトをメモ</h1>
+	<p>簡略化してgitとgithubのコネクトをメモ</p>
+
+<p>0.今回はclone済みとする<br />
+1.<repository-name>のディレクトリに移動<br /></repository-name></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/&lt;repository-name&gt;
+</code></pre></div></div>
+<p>1-2.ブランチを分ける</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git branch &lt;new branch name&gt;
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git checkout &lt;new branch name&gt;
+</code></pre></div></div>
+<p>ブランチの移動<br />
+2.addする</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git add -A
+</code></pre></div></div>
+<p>面倒なときは-Aでまとめてやっちゃえる<br />
+3.comitする</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git commit -a
+</code></pre></div></div>
+<p>もしくは</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git commit -m "ここにコミットのコメント"
+</code></pre></div></div>
+<p>3-2.githubへプッシュする</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push origin &lt;new branch name&gt;
+</code></pre></div></div>
+<p>これだとgithub側で二つのブランチができプルリクエスト、マージの必要がある。</p>
+
+<p>最後にgit bashの方でmasterブランチに戻り<br />
+<code class="highlighter-rouge">$ git pull</code><br />
+で更新される<br />
+<code class="highlighter-rouge">$ git branch -d &lt;new branch name&gt;</code><br />
+で削除も忘れずに</p>
+
+<p>1-2をやらなかったとき
+<code class="highlighter-rouge">$ git push</code>
+でいけたはず</p>
+
+<p>(定期的にアップデートしようかな)</p>
+
+</div>
+
+<footer>
+	<a href= "/backlog_home" >戻る</a>
+</footer>
+
+</body>

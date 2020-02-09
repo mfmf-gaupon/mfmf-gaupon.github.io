@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 初めてのジキル
+title: 初めてのジェキル！
 tags: [otherwise]
 top: BACKLOG
 ---

@@ -1,15 +1,14 @@
 ---
-layout: test
-title: Oh! My JK
+layout: main
+title: JK
 top: トップページ！
 ---
-# Welcome to my JK Home page!
-jkによる誰かのbacklog的な何か
-以下site変数の持つ情報  
-{{ site.markdown }}
-{{ site }}
+## Welcome to my JK Home page!
+ここはだれかさんのホームページですよ  
 
-以下ドロップス
-{{ Drops }}
-
-<a href="/backlog_home">BACKLOG</a>
+<a class="index" href="/backlog_home.html">BACKLOG</a>
+だれかさんのバックログ置き場  
+<a class="index" href="/">プロフィール</a>
+中身作る気今のところなし  
+<a class="index" href="/making">つくったもの</a>
+作ったものとか、いろいろ置いておく場所  
