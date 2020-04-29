@@ -8,8 +8,9 @@ top: OTHELLO
     <script>
 (function(){
 
-    let turn = 1;
-    let checkPiece = function(x,y,flip){
+    let turn;
+    let computer = 2;//comuputer が　白番 1,2以外にすると人対人
+    let checkPiece = function(x,y,flip){//おけるかどうかチェックflipは実際におくかどうか、戻り値はひっくり返す枚数
         let ret = 0;
         for(let dx = -1;dx <= 1;dx++){
             for(let dy = -1;dy <= 1;dy++){
@@ -32,25 +33,83 @@ top: OTHELLO
         return ret;
     };
 
+    let computerMove = function() {
+        if(turn == computer){
+        for(let x = 1; x <= 8 ;x++){
+            for(let y = 1; y <= 8;y++){
+                if(board[x][y] == 0 && checkPiece(x,y,true)){
+                    turnChange();
+                    return;
+                }
+            }
+        }
+    }
+    }
+
+    let turnChange = function() {
+        let b = 0, w = 0;
+        turn = 3 - turn;
+        let message = ((turn == 1)?"black":"white");//メモ三項演算子
+        for(let x = 1; x <= 8 ;x++){
+            for(let y = 1; y <= 8;y++){
+                if(board[x][y] == 0 && checkPiece(x,y,false)){
+                    document.getElementById("message").innerHTML = message + "'s move";
+                    showBoard();
+                    computerMove();
+                    return;
+                }
+            }
+        }
+        turn = 3 - turn;
+        message += "pass<br>" + ((turn == 1)?"black":"white") + "'s move'";
+
+        for(let x = 1; x <= 8 ;x++){
+            for(let y = 1; y <= 8;y++){
+                if(board[x][y] == 0 && checkPiece(x,y,false)){
+                    document.getElementById("message").innerHTML = message;
+                    showBoard();
+                    return;
+                }
+                else{
+                    if(board[x][y] == 1){b ++ ;}
+                    if(board[x][y] == 2){w ++;}
+                }
+            }
+        }
+
+
+        message = "black:" + b + "white:" + w + "<br>";
+        if(black == white){
+            message += "draw";
+        }
+        else{
+            message += ((b > w)? "black":"white") + " win";
+        }
+        document.getElementById("message").innerHTML = message;
+
+        showBoard();
+    }
+
     let piece;
     let showBoard = function(){
         let b = document.getElementById("board");
+        //whileから以下三行詳しくは省くがいったんすべて消してくれる。
         while(b.firstChild){
             b.removeChild(b.firstChild);
         }
+
         for(let y = 1;y <= 8;y++){
             for(let x =1;x <= 8;x++){
                 let c = piece[board[x][y]].cloneNode(true);
                 c.style.left = ((x-1)*32 + "px");
                 c.style.top = ((y-1)*32 + "px");
-                b.appendChild(c);
+                b.appendChild(c);//ここまでベースのボード表示
                 if(board[x][y] == 0){
                     (function(){
                         let _x=x,_y=y;
                         c.onclick = function(){
                             if(checkPiece(_x,_y,true)){
-                                showBoard();
-                                turn = 3 - turn;
+                                turnChange();
                             }
                         };
 
@@ -62,6 +121,7 @@ top: OTHELLO
 
     let board = [];
     onload = function(){
+        turn = 2;//1黒（先攻）,2白（後攻）
         piece = [document.getElementById("cell"),document.getElementById("black"),document.getElementById("white")];
         for(let i = 0; i < 10;i++){
             board[i] = [];
@@ -73,7 +133,7 @@ top: OTHELLO
         board[5][4] = 1;
         board[4][4] = 2;
         board[5][5] = 2;
-
+        turnChange();
         showBoard();
     };
 
@@ -98,7 +158,10 @@ top: OTHELLO
         </div>
     </div>
 
-    <div style="position:relative" id="board">test</div>
+    <div style="position:relative;width:257px ;height:257px" id="board">test</div>
+    <div id="message">massagetest</div>
 
+
+    とりあえず黒番あなた、白番コンピュータ固定
 </body>
 </html>

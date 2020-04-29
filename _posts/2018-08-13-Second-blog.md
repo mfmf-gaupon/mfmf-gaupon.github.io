@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Github Pages とJKのテスト
-tags: [otherwise]
+categories: [otherwise]
 top: BACKLOG
+published: false
 ---
 ちゃんとうごいているかな？  
 ついでにマークダウンの記法をテスト　　

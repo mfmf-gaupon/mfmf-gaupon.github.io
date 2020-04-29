@@ -1,13 +1,14 @@
 body{
     margin:0px;
-    background: linear-gradient(#1af3 150px,#1aff)fixed;
+    background: linear-gradient(160deg,#1af3 120px,#1aff)fixed;
 }
 
-
 .header{
-    background-color: #1af7;
+    background:linear-gradient(170deg, #FFF 1px, #1af7);
+    box-shadow:10px 0px 15px 1px rgba(50, 50, 93, 0.2);
     width:auto;
     height:50px;
+    opacity:1.0;
 
 }
 .header a{
@@ -27,4 +28,34 @@ body{
 .index{
     font-family:'ＭＳ ゴシック';
     font-size:20px;
+}
+
+.main{
+    padding-left:8px;
+}
+
+.making-li-expl{
+    padding-left: 16px;
+}
+
+
+/* ↓↓↓　post関係のcss ↓↓↓　*/
+.post-title h1{
+    padding-top:16px;
+    padding-left:24px;
+}
+
+.post-main{
+    display:flex;
+}
+
+
+#main-content{
+    margin: 24px;
+    flex-basis: 70%;
+}
+#archive{
+    margin:24px 24px 24px 24px;
+    flex-basis: 30%;
+    background-color:rgba(112,128,144,0.2);
 }

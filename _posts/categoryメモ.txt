@@ -1,0 +1,9 @@
+カテゴリをメモ（一応辞書順）
+atcoder
+django
+git
+github
+making
+otherwise
+
+['atcoder', 'django', 'git', 'github', 'making', 'otherwise']
