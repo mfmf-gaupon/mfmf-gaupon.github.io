@@ -9,7 +9,7 @@ body{
     width:auto;
     height:50px;
     opacity:1.0;
-
+    position:relative;
 }
 .header a{
     padding:10px 10px 0px 0px;

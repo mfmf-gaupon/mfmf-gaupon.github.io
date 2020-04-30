@@ -4,18 +4,49 @@
 <head>
     <meta http-euiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    レスポンシブ対応はまたいつか-->
     <title>オセロをつくった</title>
     <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+    <link rel="stylesheet" href="https://icono-49d6.kxcdn.com/icono.min.css">
 </head>
 
-<body>
-    <div class="header">
+<body id="main-body">
+    <div class="header" id="main-header">
         <h2>BACKLOG</h2>
         <a href="/backlog_home">BACKLOG</a>
         <a href="/making">MAKING</a>
         <a href="/">HOME</a>
+        <i class="icono-sun" id="target" style="color:#ddd;position:absolute;right:8px;top:4px;"></i>
+        <script>
+        let element = document.getElementById("target");
+        let a = element.className;
+        let body = document.getElementById("main-body");
+        let head = document.getElementById("main-header");
+
+        (function(){
+            element.onclick = function(){
+                if(a == "icono-moon"){
+                    element.className = "icono-sun";
+                    a = element.className;
+
+                    body.style.background = "linear-gradient(160deg,#1af3 120px,#1aff)fixed";
+                    head.style.background = "linear-gradient(170deg, #FFF 1px, #1af7)";
+                    body.style.color = "#000";
+                }
+                else{
+                    element.className = "icono-moon";
+                    a = element.className;
+
+                    body.style.background = "radial-gradient(circle at left top, rgba(255, 255, 170, 0.2) 10px, rgb(255, 255, 102) 50px, rgb(1, 0, 0) 230px, rgb(0, 0, 0) 104px) fixed";
+                    head.style.background = "linear-gradient(170deg, #ff6d 1px, #111c)"
+                    body.style.color = "#fff";
+                }
+            }
+        })();
+        </script>
     </div>
+    <div id="content">
     <head>
 	<title>オセロをつくった</title>
 </head>
@@ -39,6 +70,8 @@
 		カテゴリ別
 		<li>atcoder</li>
 		
+			<a href="/atcoder/2020-04-29/abc164D">2020-04-29  : Atcoder abc164D</a><br>
+		
 		<li>django</li>
 		
 		<li>git</li>
@@ -59,6 +92,8 @@
 		
 		<li>otherwise</li>
 		
+			<a href="/otherwise/2020-04-30/sun-and-moon">2020-04-30  : サンアンドムーン！</a><br>
+		
 			<a href="/otherwise/2020-04-28/Formula">2020-04-28  : 数式の表示</a><br>
 		
 		<br>
@@ -70,6 +105,7 @@
 	<a href= "/backlog_home" >戻る</a>
 </footer>
 
+    </div>
 </body>
 
 </html>
