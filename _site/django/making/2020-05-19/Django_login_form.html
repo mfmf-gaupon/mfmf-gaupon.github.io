@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0">
     レスポンシブ対応はまたいつか-->
-    <title>gitの色々メモ</title>
+    <title>Djangoでログイン機能作ってみた</title>
     <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
     <link rel="stylesheet" href="https://icono-49d6.kxcdn.com/icono.min.css">
 </head>
@@ -48,92 +48,27 @@
     </div>
     <div id="content">
     <head>
-	<title>gitの色々メモ</title>
+	<title>Djangoでログイン機能作ってみた</title>
 </head>
 <div class="post-title">
-	<h1>gitの色々メモ</h1>
+	<h1>Djangoでログイン機能作ってみた</h1>
 </div>
 <div class='post-main'>
 	<div id="main-content">
-	<p>git主要コマンドまとめ
-要試し</p>
-
-<ul>
-  <li>git init<br />
-今いるディレクトリでgitを使う宣言をする。<br />
-なおgit init <name>でnameディレクトリを作りそこをgitで使う用意がされる</name></li>
-  <li>git push<br />
-ローカルブランチのデータをリモートブランチに送る</li>
-  <li>git add<br />
-ステージ(インデックス）へのコピー
-    <ul>
-      <li>git add <ファイル名>(通常このようにして変更したいファイルをアドする)</ファイル名></li>
-      <li>git add .(カレントディレクトリ以下の変更ファイルをすべて)</li>
-      <li>git add -A(全部の変更ファイルをすべて)</li>
-    </ul>
-  </li>
-  <li>git commit<br />
-リポジトリへコミット、つまり変更を反映させる</li>
-  <li>git merge<br />
-他のブランチを現在のカレントブランチに取り込む</li>
-  <li>git fetch<br />
-ローカルリポジトリをリモートリポジトリに同期</li>
-  <li>git branch<br />
-ブランチの一覧を表示</li>
-  <li>git clone<br />
-リポジトリの複製</li>
-  <li>git remote</li>
-  <li>git pull origin master<br />
-mergeとfetchをまとめておこなう</li>
-  <li>git merge</li>
-  <li>git rebase<br />
-履歴をきれいにする、まとめてコミットを取り込む</li>
-  <li>
-    <p>git checkout <ハッシュ値何桁か>  
-ハッシュ値時点でのコミットの状態を取り出す(HEADの移動)  
-ハッシュ値は全部でなく、最初の数桁でもよい</ハッシュ値何桁か></p>
-  </li>
-  <li>git log<br />
-gitのコミットの今までのログを確認する
-    <ul>
-      <li>git log -p 各コミットの詳細なdiffを確認する</li>
-    </ul>
-  </li>
-  <li>git status<br />
-現在リポジトリの状態を確認する</li>
-  <li>git diff<br />
-どこを編集したか確認する</li>
-  <li>git remote (-v)<br />
-remoteリポジトリ表示（+URL表示）</li>
-</ul>
-
-<hr />
-
-<p>gitで開発してて取り消ししたい、ってなったのでその時の手順をめもめも</p>
-
-<h2 id="add前の変更">add前の変更</h2>
-<p>addもcommitもしてないときの取り消し方法</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 特定のファイルの変更を取り消す
-$ git checkout &lt;ファイル名&gt;
-
-#特定のディレクトリ以下の変更を再起的に取り消す
-$git checkout &lt;ディレクトリ名&gt;
-
-# 全てを元に戻す
-$ git checkout .
-</code></pre></div></div>
-
-<p>その他追加メモがあれば適宜加える</p>
+	<p>イケイケのwebフレームワークを使えば、そんなに知識なくてもそれっぽいいい感じのwebが作れる！みたいなイメージをもちつつDjangoでwebを触っていてやっとそれらしい機能の一つ、ログイン機能が実装できた。<br />
+<a href="http://parupunte.pythonanywhere.com/keiziban/">ここ</a>に掲示板もどきを作ってログインしないと書き込めないようにしてみた。とは言うものの、Djangoにはもともとユーザー認証機能が存在するのでうまく呼び出してあげただけである。<br />
+ユーザー機能ができて、さて次は何を作ろうかねぇ…<br />
+P.S.本来ならそれっぽいブログ宜しく実装のためのコードとか書くのかもしれないが、、いるか？？いらんやろ。</p>
 
 		<div id="categories" style="position:relative;padding-top:48px;">
 			カテゴリ:
 			
-			github
+			django
 			
 			,
 			
 			
-			git
+			making
 			
 			
 		</div>
